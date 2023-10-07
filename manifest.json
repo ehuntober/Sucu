@@ -1,7 +1,7 @@
 {
-  "name": "Your App",
-  "short_name": "App",
-  "description": "Your app description",
+  "name": "Sucu",
+  "short_name": "Sucu",
+  "description": "Your simple note taking app",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
