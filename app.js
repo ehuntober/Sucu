@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const preloader = document.getElementById('preloader');
+    const preloader = document.getElementById('new-preloader');
     const appContainer = document.getElementById('app-container');
   
     // Simulate a delay to show the preloader (you can adjust this as needed)
     setTimeout(() => {
       preloader.style.display = 'none';
       appContainer.style.opacity = 1;
-    }, 7000); // Show preloader for 2 seconds (adjust as needed)
+    }, 2000); // Show preloader for 2 seconds (adjust as needed)
   
     // Load notes from local storage on page load
     loadNotes();
