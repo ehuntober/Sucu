@@ -1,5 +1,39 @@
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js');
 
+// service-worker.js
+const cacheName = 'my-app-cache-v1';
+const assetsToCache = [
+  '/',
+  '/index.html',
+  '/styles.css',
+  '/app.js',
+  '/icon.png',
+  // Add more assets as needed
+];
+
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open(cacheName)
+      .then(cache => cache.addAll(assetsToCache))
+  );
+});
+
+
+// service-worker.js
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    caches.match(event.request)
+      .then(response => response || fetch(event.request))
+  );
+});
+
+
+
+
+
+
+
+
 if (workbox) {
     console.log("Yay! Workbox is loaded!");
 
