@@ -1,16 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const preloader = document.getElementById('new-preloader');
-    const appContainer = document.getElementById('app-container');
-  
-    // Simulate a delay to show the preloader (you can adjust this as needed)
-    setTimeout(() => {
+  const preloader = document.getElementById('new-preloader');
+  const appContainer = document.querySelector('.app-container'); // Use querySelector to get the first matching element
+
+  // Simulate a delay to show the preloader (you can adjust this as needed)
+  setTimeout(() => {
       preloader.style.display = 'none';
-      appContainer.style.opacity = 1;
-    }, 2000); // Show preloader for 2 seconds (adjust as needed)
-  
-    // Load notes from local storage on page load
-    loadNotes();
-  });
+
+      // Check if appContainer exists before trying to set opacity
+      if (appContainer) {
+          appContainer.style.opacity = 1;
+      }
+  }, 2000); // Show preloader for 2 seconds (adjust as needed)
+
+  // Load notes from local storage on page load
+  loadNotes();
+});
+
+
   
   function addNote() {
     const noteInput = document.getElementById('note-input');
