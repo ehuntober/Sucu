@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Your Note App</title>
+</head>
+<body>
+
+<!-- Preloader -->
+<div class="preloader" id="preloader">
+    <div class="spinner"></div>
+    <!-- <p>Sucu loading...</p> -->
+  </div>
+  
+
+  <!-- App Container -->
+  <div class="app-container">
+    <header>
+      <h1>Your Note App</h1>
+    </header>
+
+    <main>
+      <!-- Notes Container -->
+      <section id="notes-container"></section>
+
+      <!-- Actions Section -->
+      <section id="actions">
+        <textarea id="note-input" placeholder="Type your note here..."></textarea>
+        <button onclick="addNote()">Add Note</button>
+        <button onclick="clearNotes()">Clear All</button>
+      </section>
+    </main>
+
+    <!-- Note Details Modal -->
+    <div class="modal" id="noteDetailsModal">
+      <div class="modal-content">
+        <span class="close" onclick="closeNoteDetailsModal()">&times;</span>
+        <textarea id="edited-note" placeholder="Edit your note..."></textarea>
+        <button onclick="saveEditedNote()">Save Changes</button>
+        <button onclick="deleteNote()">Delete</button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="confirm-dialog" id="confirmDialog">
+    <p>Are you sure you want to delete this note?</p>
+    <div class="confirm-buttons">
+      <button onclick="confirmDeletion()">Yes</button>
+      <button onclick="closeConfirmDialog()">No</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
+
+
+
+
