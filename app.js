@@ -1,18 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
   const preloader = document.getElementById('new-preloader');
-  const appContainer = document.querySelector('.app-container'); // Use querySelector to get the first matching element
+  const appContainer = document.querySelector('.app-container');
 
-  // Simulate a delay to show the preloader (you can adjust this as needed)
   setTimeout(() => {
       preloader.style.display = 'none';
-
-      // Check if appContainer exists before trying to set opacity
       if (appContainer) {
           appContainer.style.opacity = 1;
       }
-  }, 2000); // Show preloader for 2 seconds (adjust as needed)
-
-  // Load notes from local storage on page load
+  }, 2000); 
   loadNotes();
 });
 
@@ -84,13 +79,20 @@ function createNoteElement(text) {
   
     // Add Edit button
     const editButton = document.createElement('button');
-    editButton.textContent = 'Edit';
+    editButton.textContent = 'Edit Note';
+    editButton.classList='editx'
+    // editButton.style.background='blue';
+    // editButton.style.color='white';
+    // editButton.style.border='none';
+    // editButton.style
+
+
     editButton.addEventListener('click', (event) => {
       event.stopPropagation(); // Prevent note from being clicked
       openNoteDetailsModal(note);
     });
   
-    note.appendChild(editButton);
+    note.appendChild(editButton)
   
     return note;
   }

@@ -9,7 +9,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <link rel="manifest" href="./manifest.json">
-  <title>Your Note App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Sucu - Note Taking app</title>
 </head>
 <body>
 <!-- New Preloader -->
@@ -18,12 +19,13 @@
     <p>Sucu loading...</p>
   </div>
   
-  
-
   <!-- App Container -->
   <div class="app-container">
     <header>
-      <h1>Your Note App</h1>
+      <h1>Sucu <i class="fa-solid fa-book"></i></h1>
+      <p>Your simple note taking App  </p>
+
+     
     </header>
 
     <main>
@@ -33,8 +35,12 @@
       <!-- Actions Section -->
       <section id="actions">
         <textarea id="note-input" placeholder="Type your note here..."></textarea>
+        <div class="action-btn">
+
+        
         <button onclick="addNote()">Add Note</button>
         <button onclick="clearNotes()">Clear All</button>
+      </div>
       </section>
     </main>
 
@@ -43,8 +49,8 @@
       <div class="modal-content">
         <span class="close" onclick="closeNoteDetailsModal()">&times;</span>
         <textarea id="edited-note" placeholder="Edit your note..."></textarea>
-        <button onclick="saveEditedNote()">Save Changes</button>
-        <button onclick="deleteNote()">Delete</button>
+        <button class ="mainx-btn" onclick="saveEditedNote()">Save Changes</button>
+        <button class ="mainx-btn" onclick="deleteNote()">Delete</button>
       </div>
     </div>
   </div>
@@ -76,7 +82,8 @@
       })
     }
   </script>
-  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
  
 </body>
 </html>
